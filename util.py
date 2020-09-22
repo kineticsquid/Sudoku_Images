@@ -1,20 +1,10 @@
-from PIL import Image
-import numpy
-from numpy import asarray
-from skimage.transform import hough_line, hough_line_peaks
-from skimage.feature import canny
 import cv2
+import numpy
+from matplotlib import pyplot
 
-# Colors less than this are made black (0), greater are made white (255)
-hue_threshold = 128
-black = 0
-white = 255
-
-# Percentage of pixels in a line that are black. If greater than this
-# then we've found a line
-# between .5 and .75
-line_threshold = 0.7
-
+"""
+Routine to redistribute values in an array to an array of different length
+"""
 def morph_array_to_size(from_array, to_size):
     from_size = len(from_array)
     to_array = numpy.zeros((to_size), dtype=float)
@@ -48,270 +38,263 @@ def morph_array_to_size(from_array, to_size):
 
     return to_array
 
-def count_pixels(image):
-    width, height = image.size
-    # arrays to hold the x and y axis totals for this image
-    x_histogram = numpy.zeros((width), dtype=int)
-    y_histogram = numpy.zeros((height), dtype=int)
-    # scan the image and count
-    for y in range(height):
-        for x in range(width):
-            if image.getpixel((x, y)) == black:
-                x_histogram[x] += 1
-                y_histogram[y] += 1
-    return x_histogram, y_histogram
+"""
+Routine to display an image and optionally a title
+"""
 
-def diff_between_arrays(a1, a2):
-    diff = 0
-    for n in range(len(a1)):
-        diff += (a1[n] - a2[n]) * (a1[n] - a2[n])
-    return diff
 
-def get_number_from_image(image, x_metrics, y_metrics):
-    x_counts, y_counts = count_pixels(image)
-    x_metrics_size = len(x_metrics["1"])
-    y_metrics_size = len(y_metrics["1"])
-    #normalize the size of the image arrays to match the metrics data
-    x_histogram = morph_array_to_size(x_counts, x_metrics_size)
-    y_histogram = morph_array_to_size(y_counts, y_metrics_size)
-    # Now get percentages
-    x_sum = sum(x_histogram)
-    y_sum = sum(y_histogram)
-    for n in range(x_histogram.size):
-        x_histogram[n] = x_histogram[n]/x_sum
-    for n in range(y_histogram.size):
-        y_histogram[n] = y_histogram[n]/y_sum
-    # Now calculate difference between x and y pixel distribution for this image and metrics data
-    # the 1000 is there for readability
-    x_distance = numpy.zeros((len(x_metrics)+1), dtype=float)
-    for n in range(1, len(x_metrics)+1):
-        x_distance[n] = diff_between_arrays(x_histogram, x_metrics[str(n)]) * 1000
-    y_distance = numpy.zeros((len(y_metrics)+1), dtype=float)
-    for n in range(1, len(y_metrics)+1):
-        y_distance[n] = diff_between_arrays(y_histogram, y_metrics[str(n)]) * 1000
-
-    # x_distance is an array that has the least squares distance between the x-axis histogram
-    # of this image and the x-axis histograms of the training data [1..9]. y_distance is the
-    # same thing along the y-axis. The algorithm to determine the digit in the image goes like this:
-    # We first match using the y-axis histogram. Experiments have shown this is accurate for
-    # everything except some confusion when a '1' is incorrectly recognized as a '2'. So,
-    # when we see a '2', perform a second check using the x-axis to see which distance is less,
-    # '1' or '2'.
-    #
-    # Other algorithms attempted:
-    # - x_distance
-    # - y_distance
-    # - x_distance * y_distance
-    for n in range(1, len(x_metrics)+1):
-        print('n: %s. x_distance: %s, y_distance: %s' % (n, x_distance[n], y_distance[n]))
-        if n == 1:
-            current_y_distance_min = y_distance[n]
-            number = n
-        else:
-            if y_distance[n] < current_y_distance_min:
-                current_y_distance_min = y_distance[n]
-                number = n
-    if number == 2:
-        if x_distance[1] < x_distance[2]:
-            number = 1
-
-    print('number: %s' % number)
-    return number
-
-def print_image(image, bounding_box):
-    if bounding_box is None:
-        width, height = image.size
-        left = 0
-        top = 0
-        right = width - 1
-        bottom = height - 1
+def show_image(image, title=None, color=False):
+    if color is True:
+        pyplot.imshow(image)
     else:
-        left, top, right, bottom = bounding_box
-    print("Left: %s, Top: %s, Right: %s, Bottom: %s" % (left, top, right, bottom))
-    print(' ', end='\t')
-    for x in range(left, right + 1):
-        print(x%10, end='')
-    print(end='\n')
-    for y in range(top, bottom+1):
-        print(y, end='\t')
-        for x in range(left, right+1):
-            if image.getpixel((x, y)) == black:
-                print("X", end='')
-            else:
-                print(".", end='')
-        print(end='\n')
+        pyplot.imshow(image, cmap='Greys_r')
+    if title is not None:
+        pyplot.title(title)
+        pyplot.show()
 
-def print_image_edges(image_array):
-    edge_image = Image.fromarray(image_array)
-    edge_image.show()
-    inverse = numpy.linalg.inv(image_array)
-    inverse_image = Image.fromarray(inverse)
-    inverse_image.show()
 
-def preprocess_image(image_name):
-    image = cv2.imread(image_name)
-    edges = cv2.Canny(image, 50, 150, apertureSize=3)
-    print_image_edges(edges)
+"""
+Routine to add lines to an image. The source image must be color for the lines to show up.
+"""
 
-    (thresh, blackAndWhiteImage) = cv2.threshold(image, 127, 255, cv2.THRESH_BINARY)
-    edges = cv2.Canny(blackAndWhiteImage, 50, 150, apertureSize=3)
-    print_image_edges(edges)
 
-    image2 = cv2.adaptiveThreshold(image, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
-                                   cv2.THRESH_BINARY, 11, 2)
-    edges = cv2.Canny(image2, 50, 150, apertureSize=3)
-    print_image_edges(edges)
+def show_lines(image, lines, title=None):
+    # We get image height and width this way since a black and white image returns (height, width) and a color image returns (heigh, width, depth)
+    image_shape = image.shape
+    image_height = image_shape[0]
+    image_width = image_shape[1]
 
-    height, width, color_depth = image.shape
-    new_image = numpy.ones((height, width)) * 255
-    print_image_edges(new_image)
+    image_color_copy = cv2.cvtColor(image.copy(), cv2.COLOR_GRAY2RGB)
 
-    # need to figure out how these lines are represented in the data structures
-    lines = cv2.HoughLines(edges, 1, numpy.pi / 180, 200)
+    color = (0, 0, 192)
+    thickness = 5
+    for line in lines:
+        try:
+            start_point = (line[0][0], line[0][1])
+            end_point = (line[0][2], line[0][3])
+            cv2.line(image_color_copy, start_point, end_point, color, thickness)
+        except Exception as e:
+            print(line)
+            print(e)
+    show_image(image_color_copy, title=title, color=True)
 
-    return image
 
-def old_preprocess_image(image):
-    # First darken the image a bit to make the lines show up better
-    image_mono = image.point(lambda p: p * 0.9)
-    # Now make it monochrome
-    image_mono = image_mono.convert('1', dither=Image.NONE)
-    image_mono.show()
-    # Convert to array for further processing
-    array_image = asarray(image_mono)
-    # detect edges in the image
-    edges = canny(array_image, sigma=4)
-    out, angles, d = hough_line(edges)
-    print_image_edges(edges)
+"""
+Routine to find lines in an image. It uses HoughlinesP to find the lines. Because the alg
+finds horizontal lines first and 'occupies' the pixels of these lines. Vertical lines then have gaps   
+where the horizontal lines cross. The gaps inhibit the finding of the vertical lines. So, process is
+to scan the image. Extract the horizontal lines. Then rotate the image 90 degrees and extract those
+horizontal lines (which are the actual vertical ones).
+"""
 
-    return image_mono
 
 def find_lines(image):
-    image_width, image_height = image.size
-    vertical_line_pixels = numpy.zeros(image_width, dtype=int)
-    vertical_lines = []
-    horizontal_line_pixels = numpy.zeros(image_height, dtype=int)
-    horizontal_lines = []
-    for y in range(image_height):
-        for x in range(image_width):
-            pixel = image.getpixel((x, y))
-            if pixel == black:
-                vertical_line_pixels[x] += 1
-                horizontal_line_pixels[y] += 1
 
-    front_edge_of_line_found = False
-    for x in range(image_width):
-        if vertical_line_pixels[x] / image_height >= line_threshold:
-            if not front_edge_of_line_found:
-                front_edge_of_line_found = True
-                front_edge_of_line = x
-        else:
-            if front_edge_of_line_found:
-                vertical_lines.append((front_edge_of_line, x-1))
-                front_edge_of_line_found = False
-    if front_edge_of_line_found:
-        vertical_lines.append((front_edge_of_line, x-1))
-        front_edge_of_line_found = False
+    image_height, image_width = image.shape
+    minimum_side = min(image_height, image_width)
+    min_line_length = int(minimum_side / 2)
+    max_line_gap = int(minimum_side / 100)
+    threshold = minimum_side * 2
 
-    for y in range(image_height):
-        if horizontal_line_pixels[y] / image_width >= line_threshold:
-            if not front_edge_of_line_found:
-                front_edge_of_line_found = True
-                front_edge_of_line = y
+    done = False
+    while not done:
+        lines = cv2.HoughLinesP(image, 1, numpy.pi / 180, threshold=threshold, minLineLength=min_line_length,
+                                maxLineGap=max_line_gap)
+        horizontal_lines, vertical_lines, rejected_lines = separate_lines(lines)
+        print("\nThreshold: %s" % threshold)
+        print("Horizontal lines: %s" % len(horizontal_lines))
+        print("Vertical lines: %s" % len(vertical_lines))
+        print("Rejected lines: %s" % len(rejected_lines))
+        if enough_lines(horizontal_lines, vertical_lines):
+            done = True
+        elif threshold > 10:
+            threshold = int(threshold / 2)
         else:
-            if front_edge_of_line_found:
-                horizontal_lines.append((front_edge_of_line, y-1))
-                front_edge_of_line_found = False
-    if front_edge_of_line_found:
-        horizontal_lines.append((front_edge_of_line, y-1))
-        front_edge_of_line_found = False
+            done = True
 
     return horizontal_lines, vertical_lines
 
+"""
+Routine to separate out and return only the horizontal and vertical lines and a separate list of those
+lines rejected.
+"""
 
-def get_cell_image_boundaries(horizontal_lines, vertical_lines):
-
-    cell_images_boundaries = numpy.zeros((len(horizontal_lines)-1,
-                                          len(vertical_lines)-1), dtype=object)
-    for row in range(len(horizontal_lines) - 1):
-        for column in range(len(vertical_lines) - 1):
-            cell_images_boundaries[row, column] = (vertical_lines[column][1]+1,
-                horizontal_lines[row][1]+1,
-                vertical_lines[column+1][0]-1,
-                horizontal_lines[row+1][0]-1)
-    return cell_images_boundaries
-
-def black_pixel_in_column(image, column, top_start, bottom_stop):
-    x = column
-    for y in range(top_start, bottom_stop + 1):
-        if image.getpixel((x, y)) == black:
-            return True
-    return False
-
-def black_pixel_in_row(image, row, left_start, right_stop):
-    y = row
-    for x in range(left_start, right_stop + 1):
-        if image.getpixel((x, y)) == black:
-            return True
-    return False
-
-def black_pixel_in_image(image, left_start, top_start, right_stop, bottom_stop):
-    for y in range(top_start, bottom_stop + 1):
-        for x in range(left_start, right_stop + 1):
-            if image.getpixel((x, y)) == black:
-                return True
-    return False
-
-def trim_cell_images(image, cell_image_boundaries):
-
-    rows, columns = cell_image_boundaries.shape
-    for row in range(rows):
-        for column in range(columns):
-            new_left = cell_image_boundaries[row][column][0]
-            new_top = cell_image_boundaries[row][column][1]
-            new_right = cell_image_boundaries[row][column][2]
-            new_bottom = cell_image_boundaries[row][column][3]
-
-            # First get rid of any black around the edges
-            done = False
-            while not done:
-                done = True
-                if black_pixel_in_column(image, new_left, new_top, new_bottom):
-                    new_left += 1
-                    done = False
-                if black_pixel_in_row(image, new_top, new_left, new_right):
-                    new_top += 1
-                    done = False
-                if black_pixel_in_column(image, new_right, new_top, new_bottom):
-                    new_right -= 1
-                    done = False
-                if black_pixel_in_row(image, new_bottom, new_left, new_right):
-                    new_bottom -= 1
-                    done = False
-
-            # Now, get rid of the white space around the number. First make sure it's not a blank cell.
-            if black_pixel_in_image(image, new_left, new_top, new_right, new_bottom):
-                # print_image(image, (new_left, new_top, new_right, new_bottom))
-                done = False
-                while not done:
-                    done = True
-                    if not black_pixel_in_column(image, new_left, new_top, new_bottom):
-                        new_left += 1
-                        done = False
-                    if not black_pixel_in_row(image, new_top, new_left, new_right):
-                        new_top += 1
-                        done = False
-                    if not black_pixel_in_column(image, new_right, new_top, new_bottom):
-                        new_right -= 1
-                        done = False
-                    if not black_pixel_in_row(image, new_bottom, new_left, new_right):
-                        new_bottom -= 1
-                        done = False
+def separate_lines(lines):
+    margin_of_error = numpy.pi / 45
+    horizontal_lines = []
+    vertical_lines = []
+    rejected_lines = []
+    if lines is not None:
+        for line in lines:
+            x1 = line[0][0]
+            y1 = line[0][1]
+            x2 = line[0][2]
+            y2 = line[0][3]
+            sin_theta = (x1 - x2) / numpy.sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2))
+            theta = numpy.arcsin(sin_theta)
+            if abs(theta) <= margin_of_error or abs(abs(theta) - numpy.pi) <= margin_of_error:
+                # vertical line
+                vertical_lines.append(line)
+            elif abs(abs(theta) - numpy.pi / 2) <= margin_of_error or abs(
+                    abs(theta) - numpy.pi * 3 / 2) <= margin_of_error:
+                # horizontal line
+                horizontal_lines.append(line)
             else:
-                # This means a blank cell so set coordinates to indicate so
-                new_left = 0
-                new_top = 0
-                new_right = 0
-                new_bottom = 0
-            cell_image_boundaries[row][column] = (new_left, new_top, new_right, new_bottom)
+                rejected_lines.append(line)
+    return horizontal_lines, vertical_lines, rejected_lines
 
+"""
+Routine to invert image (black and white)
+"""
+
+
+def invert_image(image):
+    bw_threshold = 160
+    (thresh, inverted_image) = cv2.threshold(image, bw_threshold, 255, cv2.THRESH_BINARY_INV)
+    return inverted_image
+
+
+"""
+Routine to pre-process an image before attempting to identify lines and extract digits. Among other things,
+make it monochromatic.
+
+We'll use this once we deal with real photos vs computer generated images/graphics.
+"""
+
+
+def preprocess_image(image):
+
+    return image
+
+"""
+Routine to determine if we've found enough lines 
+"""
+def enough_lines(horizontal_lines, vertical_lines):
+    if len(horizontal_lines) > 0:
+        if len(vertical_lines) > 0:
+            if len(horizontal_lines) > len(vertical_lines):
+                if len(vertical_lines) / len(horizontal_lines) > 0.5:
+                    done = True
+                else:
+                    done = False
+            elif len(vertical_lines) > len(horizontal_lines):
+                if len(horizontal_lines) / len(vertical_lines) > 0.5:
+                    done = True
+                else:
+                    done = False
+            else:
+                done = True
+        else:
+            done = False
+    else:
+        done = False
+    return done
+"""
+This routine first trims traces of lines left at the edges of the image and then trims the blank
+space to leave just the digit. Because there is noise in the images, we use the x_min and y_min
+values to represent blank space. If the trimming results in nothing left, the routine returns None,
+which gets interpreted as a blank cell.
+"""
+
+def trim(raw_image):
+    # This is summing columns vertically
+    x_counts = raw_image.sum(axis=0)
+    # This is summing rows horizontally
+    y_counts = raw_image.sum(axis=1)
+    x_min = min(x_counts)
+    y_min = min(y_counts)
+    x_start = 0
+    y_start = 0
+    x_end = len(x_counts) - 1
+    y_end = len(y_counts) - 1
+
+    # trim residual line noise from the left
+    while x_counts[x_start] > x_min:
+        x_start += 1
+    #trim residual line noise from the top
+    while y_counts[y_start] > y_min:
+        y_start += 1
+    #trim residual line noise from the right
+    while x_counts[x_end] > x_min:
+        x_end -= 1
+    #trim residual line noise from the bottom
+    while y_counts[y_end] > y_min:
+        y_end -= 1
+    # Now remove blank space on the left
+    while x_counts[x_start] == x_min and x_start != x_end:
+        x_start += 1
+    # If x_start == x_end after removing the line noise from the edges, it means the cell
+    # is empty, so return None.
+    if x_start == x_end:
+        trimmed_image = None
+    # Otherwise, finish removing the blank space around the digit.
+    else:
+        # Remove the blank space on the right
+        while x_counts[x_end] == x_min:
+            x_end -= 1
+        # Now remove blank space on the top
+        while y_counts[y_start] == y_min:
+            y_start += 1
+        # Now remove blank space on the bottom
+        while y_counts[y_end] == y_min:
+            y_end -= 1
+        trimmed_image = raw_image[y_start:y_end, x_start:x_end]
+
+    return trimmed_image
+
+"""
+Routine to process an image to find the lines and then the inside boundaries of the cells that contain
+the digits
+"""
+
+def get_cell_boundaries(image):
+    # First, invert the image so that the lines and digits are white and the background black.
+    # We need this for the cv.houghline algorithm to work.
+    # show_image(image)
+    inverted_image = invert_image(image)
+    # show_image(inverted_image)
+    image_height, image_width = inverted_image.shape
+    print("Inverted image width:\t%s" % image_width)
+    print("Inverted image height:\t%s" % image_height)
+    # Find all the lines in the image
+    horizontal_lines, vertical_lines = find_lines(inverted_image)
+
+    # show_lines(inverted_image, horizontal_lines)
+    # show_lines(inverted_image, vertical_lines)
+
+    def horizontal_sort_func(i):
+        return (min(i[0][1], i[0][3]))
+
+    def vertical_sort_func(i):
+        return (min(i[0][0], i[0][2]))
+
+    # Now look for the internal coordinates of the matrix cells. Do this first for the horizontal lines,
+    # which will give us the y axis coordinates of the cells.
+    # 1. Sort by the y value of the line (since the line may not be exactly vertical, sort by the min
+    #    y value of the two end points.
+    # 2. Since lines are 1 pixel wide, starting at the top, go pixel by pixel. If we have a line that is
+    #    the same y value as the previous or is +1, we know we're in the same line in the matrix image
+    #    (which are > 1 pixel wide.
+    # 3. Otherwise if there is more of a gap, we know we've traversed a cell and are hitting the start
+    #    of the line at the other side.
+    # 4. In this case, add the coordinates to the list of coordinates.
+    horizontal_lines.sort(key=horizontal_sort_func)
+    y_coords = []
+    for i in range(0, len(horizontal_lines) - 1):
+        if horizontal_lines[i + 1][0][1] > horizontal_lines[i][0][1] + 1:
+            y_coords.append([horizontal_lines[i][0][1] + 1, horizontal_lines[i + 1][0][1] - 1])
+        current = horizontal_lines[i][0][1]
+    print('Y coordinates:')
+    print(y_coords)
+
+    # Now same for vertical lines and values on the x axis
+    vertical_lines.sort(key=vertical_sort_func)
+    x_coords = []
+    for i in range(0, len(vertical_lines) - 1):
+        if vertical_lines[i + 1][0][0] > vertical_lines[i][0][0] + 1:
+            x_coords.append([vertical_lines[i][0][0] + 1, vertical_lines[i + 1][0][0] - 1])
+        current = vertical_lines[i][0][0]
+    print('X coordinates:')
+    print(x_coords)
+
+    return x_coords, y_coords

@@ -1,0 +1,410 @@
+Algorithm:
+- Compute histogram os distriution of pixels (as a percentage of all pixels in the number image) along both the X and Y axes.
+- Least sqaures distance using the Y axis.
+- If the result is 2, use the lesser of the X Axis differences to decide between 1 and 2
+
+/usr/local/bin/python3.8 /Users/jk/DevelopmentEnvironment/Sudoku_Images/extract_matrix_from_image.py ./Images/Sudoku_20200509.png ./Image_metrics_20200508/ ./Images/pound.png ./Images/sudoku2.png ./Images/Sudoku_20200509.png ./Images/sudokupuzzler.26.jpg ./Images/sudoku2.png ./Images/sudoku_training.png
+Image: ./Images/Sudoku_20200509.png
+Inverted image width:	1044
+Inverted image height:	1138
+
+Threshold: 2088
+Horizontal lines: 0
+Vertical lines: 0
+Rejected lines: 0
+
+Threshold: 1044
+Horizontal lines: 0
+Vertical lines: 0
+Rejected lines: 0
+
+Threshold: 522
+Horizontal lines: 44
+Vertical lines: 42
+Rejected lines: 0
+Y coordinates:
+[[150, 242], [247, 340], [344, 436], [443, 535], [540, 634], [638, 730], [737, 829], [833, 927], [931, 1023]]
+X coordinates:
+[[90, 182], [187, 280], [284, 376], [383, 475], [480, 573], [577, 670], [676, 769], [773, 866], [870, 963]]
+Number: 0
+n: 0	x_distance: 81.39	y_distance: 68.13
+n: 1	x_distance: 42.98	y_distance: 32.86
+n: 2	x_distance: 21.63	y_distance: 52.34
+n: 3	x_distance: 27.47	y_distance: 39.64
+n: 4	x_distance: 7.86	y_distance: 2.99
+n: 5	x_distance: 34.19	y_distance: 46.57
+n: 6	x_distance: 37.99	y_distance: 25.48
+n: 7	x_distance: 26.11	y_distance: 63.04
+n: 8	x_distance: 33.66	y_distance: 22.74
+n: 9	x_distance: 33.76	y_distance: 29.10
+Number: 4
+Number: 0
+Number: 0
+n: 0	x_distance: 55.67	y_distance: 55.61
+n: 1	x_distance: 37.96	y_distance: 11.64
+n: 2	x_distance: 5.02	y_distance: 19.78
+n: 3	x_distance: 7.07	y_distance: 8.35
+n: 4	x_distance: 29.38	y_distance: 23.91
+n: 5	x_distance: 2.40	y_distance: 16.96
+n: 6	x_distance: 3.41	y_distance: 7.32
+n: 7	x_distance: 15.19	y_distance: 37.28
+n: 8	x_distance: 1.72	y_distance: 3.57
+n: 9	x_distance: 2.13	y_distance: 2.00
+Number: 9
+Number: 0
+Number: 0
+Number: 0
+n: 0	x_distance: 55.78	y_distance: 63.15
+n: 1	x_distance: 31.78	y_distance: 3.11
+n: 2	x_distance: 5.91	y_distance: 1.96
+n: 3	x_distance: 10.64	y_distance: 7.44
+n: 4	x_distance: 29.90	y_distance: 33.28
+n: 5	x_distance: 5.15	y_distance: 17.91
+n: 6	x_distance: 6.34	y_distance: 18.67
+n: 7	x_distance: 11.49	y_distance: 37.76
+n: 8	x_distance: 5.38	y_distance: 11.46
+n: 9	x_distance: 5.35	y_distance: 14.84
+Number: 2
+
+
+n: 0	x_distance: 55.49	y_distance: 62.58
+n: 1	x_distance: 31.78	y_distance: 4.14
+n: 2	x_distance: 5.72	y_distance: 2.14
+n: 3	x_distance: 10.61	y_distance: 6.50
+n: 4	x_distance: 29.03	y_distance: 34.02
+n: 5	x_distance: 5.22	y_distance: 16.09
+n: 6	x_distance: 6.14	y_distance: 17.87
+n: 7	x_distance: 11.28	y_distance: 36.48
+n: 8	x_distance: 5.26	y_distance: 10.84
+n: 9	x_distance: 5.32	y_distance: 14.85
+Number: 2
+Number: 0
+Number: 0
+Number: 0
+Number: 0
+n: 0	x_distance: 59.13	y_distance: 55.92
+n: 1	x_distance: 37.23	y_distance: 8.31
+n: 2	x_distance: 7.85	y_distance: 11.91
+n: 3	x_distance: 5.30	y_distance: 3.38
+n: 4	x_distance: 28.97	y_distance: 26.46
+n: 5	x_distance: 6.92	y_distance: 12.72
+n: 6	x_distance: 9.74	y_distance: 9.03
+n: 7	x_distance: 14.59	y_distance: 29.95
+n: 8	x_distance: 6.77	y_distance: 5.69
+n: 9	x_distance: 4.85	y_distance: 10.13
+Number: 3
+Number: 0
+Number: 0
+n: 0	x_distance: 63.57	y_distance: 83.64
+n: 1	x_distance: 15.83	y_distance: 42.44
+n: 2	x_distance: 13.07	y_distance: 34.09
+n: 3	x_distance: 25.62	y_distance: 26.67
+n: 4	x_distance: 33.14	y_distance: 56.87
+n: 5	x_distance: 22.48	y_distance: 25.96
+n: 6	x_distance: 27.08	y_distance: 42.75
+n: 7	x_distance: 5.40	y_distance: 3.90
+n: 8	x_distance: 25.76	y_distance: 34.08
+n: 9	x_distance: 25.80	y_distance: 34.55
+Number: 7
+
+
+n: 0	x_distance: 58.30	y_distance: 52.88
+n: 1	x_distance: 43.53	y_distance: 10.21
+n: 2	x_distance: 8.05	y_distance: 17.25
+n: 3	x_distance: 10.57	y_distance: 5.03
+n: 4	x_distance: 31.11	y_distance: 19.56
+n: 5	x_distance: 4.80	y_distance: 10.00
+n: 6	x_distance: 4.77	y_distance: 3.29
+n: 7	x_distance: 17.45	y_distance: 32.71
+n: 8	x_distance: 3.39	y_distance: 1.68
+n: 9	x_distance: 4.86	y_distance: 4.61
+Number: 8
+n: 0	x_distance: 57.25	y_distance: 55.54
+n: 1	x_distance: 43.39	y_distance: 13.30
+n: 2	x_distance: 10.98	y_distance: 20.51
+n: 3	x_distance: 15.06	y_distance: 7.09
+n: 4	x_distance: 40.09	y_distance: 21.72
+n: 5	x_distance: 6.52	y_distance: 9.30
+n: 6	x_distance: 5.18	y_distance: 2.12
+n: 7	x_distance: 19.91	y_distance: 35.85
+n: 8	x_distance: 5.74	y_distance: 3.61
+n: 9	x_distance: 5.63	y_distance: 6.63
+Number: 6
+Number: 0
+Number: 0
+Number: 0
+n: 0	x_distance: 62.72	y_distance: 80.99
+n: 1	x_distance: 17.78	y_distance: 37.46
+n: 2	x_distance: 14.15	y_distance: 31.27
+n: 3	x_distance: 26.77	y_distance: 24.53
+n: 4	x_distance: 34.61	y_distance: 51.20
+n: 5	x_distance: 22.86	y_distance: 26.29
+n: 6	x_distance: 27.14	y_distance: 39.66
+n: 7	x_distance: 6.48	y_distance: 6.92
+n: 8	x_distance: 26.09	y_distance: 31.32
+n: 9	x_distance: 26.36	y_distance: 31.64
+Number: 7
+Number: 0
+n: 0	x_distance: 56.82	y_distance: 55.85
+n: 1	x_distance: 40.84	y_distance: 12.98
+n: 2	x_distance: 8.79	y_distance: 20.58
+n: 3	x_distance: 10.02	y_distance: 8.05
+n: 4	x_distance: 35.10	y_distance: 25.49
+n: 5	x_distance: 5.52	y_distance: 15.86
+n: 6	x_distance: 5.66	y_distance: 7.43
+n: 7	x_distance: 17.21	y_distance: 35.39
+n: 8	x_distance: 4.94	y_distance: 3.69
+n: 9	x_distance: 3.96	y_distance: 2.15
+Number: 9
+Number: 0
+
+
+Number: 0
+Number: 0
+Number: 0
+Number: 0
+n: 0	x_distance: 58.40	y_distance: 55.67
+n: 1	x_distance: 45.82	y_distance: 11.85
+n: 2	x_distance: 9.65	y_distance: 19.52
+n: 3	x_distance: 14.39	y_distance: 6.75
+n: 4	x_distance: 36.41	y_distance: 21.06
+n: 5	x_distance: 6.86	y_distance: 10.98
+n: 6	x_distance: 4.02	y_distance: 1.96
+n: 7	x_distance: 20.59	y_distance: 38.23
+n: 8	x_distance: 5.08	y_distance: 3.79
+n: 9	x_distance: 4.57	y_distance: 6.39
+Number: 6
+n: 0	x_distance: 58.92	y_distance: 62.86
+n: 1	x_distance: 38.67	y_distance: 22.05
+n: 2	x_distance: 8.11	y_distance: 20.11
+n: 3	x_distance: 12.60	y_distance: 10.14
+n: 4	x_distance: 33.30	y_distance: 37.52
+n: 5	x_distance: 5.08	y_distance: 1.51
+n: 6	x_distance: 5.98	y_distance: 9.93
+n: 7	x_distance: 16.28	y_distance: 25.80
+n: 8	x_distance: 4.84	y_distance: 10.00
+n: 9	x_distance: 5.98	y_distance: 17.42
+Number: 5
+Number: 0
+n: 0	x_distance: 77.56	y_distance: 61.99
+n: 1	x_distance: 23.85	y_distance: 2.72
+n: 2	x_distance: 24.83	y_distance: 2.30
+n: 3	x_distance: 22.93	y_distance: 7.16
+n: 4	x_distance: 44.03	y_distance: 32.17
+n: 5	x_distance: 34.90	y_distance: 17.25
+n: 6	x_distance: 44.66	y_distance: 18.04
+n: 7	x_distance: 17.06	y_distance: 36.88
+n: 8	x_distance: 39.90	y_distance: 10.50
+n: 9	x_distance: 33.09	y_distance: 13.80
+Number: 1
+Number: 0
+
+
+n: 0	x_distance: 57.50	y_distance: 64.34
+n: 1	x_distance: 37.12	y_distance: 26.73
+n: 2	x_distance: 7.56	y_distance: 24.09
+n: 3	x_distance: 11.99	y_distance: 11.18
+n: 4	x_distance: 33.27	y_distance: 38.24
+n: 5	x_distance: 4.45	y_distance: 4.44
+n: 6	x_distance: 5.78	y_distance: 11.78
+n: 7	x_distance: 15.06	y_distance: 28.17
+n: 8	x_distance: 4.57	y_distance: 11.20
+n: 9	x_distance: 5.77	y_distance: 18.88
+Number: 5
+Number: 0
+Number: 0
+Number: 0
+Number: 0
+Number: 0
+Number: 0
+Number: 0
+n: 0	x_distance: 59.06	y_distance: 60.79
+n: 1	x_distance: 43.04	y_distance: 20.68
+n: 2	x_distance: 7.98	y_distance: 39.40
+n: 3	x_distance: 10.46	y_distance: 21.87
+n: 4	x_distance: 32.19	y_distance: 22.36
+n: 5	x_distance: 6.30	y_distance: 34.96
+n: 6	x_distance: 5.50	y_distance: 14.17
+n: 7	x_distance: 18.32	y_distance: 62.15
+n: 8	x_distance: 4.96	y_distance: 11.04
+n: 9	x_distance: 3.88	y_distance: 9.66
+Number: 9
+
+
+Number: 0
+n: 0	x_distance: 56.38	y_distance: 55.60
+n: 1	x_distance: 40.69	y_distance: 11.45
+n: 2	x_distance: 8.65	y_distance: 19.40
+n: 3	x_distance: 9.91	y_distance: 8.10
+n: 4	x_distance: 33.82	y_distance: 24.28
+n: 5	x_distance: 5.73	y_distance: 16.80
+n: 6	x_distance: 5.49	y_distance: 7.39
+n: 7	x_distance: 17.11	y_distance: 37.04
+n: 8	x_distance: 4.94	y_distance: 3.60
+n: 9	x_distance: 3.86	y_distance: 2.15
+Number: 9
+Number: 0
+n: 0	x_distance: 63.00	y_distance: 84.11
+n: 1	x_distance: 17.17	y_distance: 42.75
+n: 2	x_distance: 14.20	y_distance: 34.13
+n: 3	x_distance: 26.22	y_distance: 26.83
+n: 4	x_distance: 34.80	y_distance: 57.43
+n: 5	x_distance: 23.05	y_distance: 26.18
+n: 6	x_distance: 27.64	y_distance: 43.13
+n: 7	x_distance: 6.25	y_distance: 4.30
+n: 8	x_distance: 26.39	y_distance: 34.40
+n: 9	x_distance: 26.36	y_distance: 34.93
+Number: 7
+n: 0	x_distance: 63.67	y_distance: 56.18
+n: 1	x_distance: 41.10	y_distance: 7.91
+n: 2	x_distance: 8.50	y_distance: 11.58
+n: 3	x_distance: 6.30	y_distance: 3.40
+n: 4	x_distance: 25.61	y_distance: 26.52
+n: 5	x_distance: 9.89	y_distance: 13.31
+n: 6	x_distance: 11.89	y_distance: 8.90
+n: 7	x_distance: 17.24	y_distance: 32.01
+n: 8	x_distance: 8.63	y_distance: 5.66
+n: 9	x_distance: 6.80	y_distance: 9.93
+Number: 3
+Number: 0
+Number: 0
+Number: 0
+Number: 0
+
+
+Number: 0
+n: 0	x_distance: 59.08	y_distance: 53.09
+n: 1	x_distance: 44.35	y_distance: 9.69
+n: 2	x_distance: 8.62	y_distance: 16.63
+n: 3	x_distance: 11.09	y_distance: 4.81
+n: 4	x_distance: 33.65	y_distance: 19.86
+n: 5	x_distance: 4.61	y_distance: 10.31
+n: 6	x_distance: 5.32	y_distance: 3.29
+n: 7	x_distance: 18.29	y_distance: 33.71
+n: 8	x_distance: 3.75	y_distance: 1.60
+n: 9	x_distance: 4.97	y_distance: 4.20
+Number: 8
+Number: 0
+n: 0	x_distance: 118.73	y_distance: 59.90
+n: 1	x_distance: 92.83	y_distance: 11.19
+n: 2	x_distance: 58.43	y_distance: 30.48
+n: 3	x_distance: 44.43	y_distance: 22.69
+n: 4	x_distance: 64.21	y_distance: 22.13
+n: 5	x_distance: 61.30	y_distance: 33.78
+n: 6	x_distance: 73.27	y_distance: 22.20
+n: 7	x_distance: 69.82	y_distance: 50.19
+n: 8	x_distance: 67.77	y_distance: 13.75
+n: 9	x_distance: 56.13	y_distance: 14.99
+Number: 1
+Number: 0
+Number: 0
+Number: 0
+n: 0	x_distance: 80.42	y_distance: 71.72
+n: 1	x_distance: 42.35	y_distance: 36.34
+n: 2	x_distance: 20.86	y_distance: 54.71
+n: 3	x_distance: 26.94	y_distance: 43.10
+n: 4	x_distance: 7.70	y_distance: 4.41
+n: 5	x_distance: 33.22	y_distance: 48.00
+n: 6	x_distance: 36.91	y_distance: 28.10
+n: 7	x_distance: 25.34	y_distance: 63.75
+n: 8	x_distance: 32.74	y_distance: 27.35
+n: 9	x_distance: 32.87	y_distance: 35.51
+Number: 4
+n: 0	x_distance: 59.88	y_distance: 56.11
+n: 1	x_distance: 37.91	y_distance: 8.41
+n: 2	x_distance: 7.97	y_distance: 11.59
+n: 3	x_distance: 5.21	y_distance: 3.39
+n: 4	x_distance: 28.32	y_distance: 26.26
+n: 5	x_distance: 7.40	y_distance: 12.58
+n: 6	x_distance: 10.19	y_distance: 9.02
+n: 7	x_distance: 14.79	y_distance: 29.78
+n: 8	x_distance: 6.94	y_distance: 5.83
+n: 9	x_distance: 5.39	y_distance: 10.48
+Number: 3
+
+
+n: 0	x_distance: 96.48	y_distance: 61.21
+n: 1	x_distance: 74.18	y_distance: 12.72
+n: 2	x_distance: 37.69	y_distance: 32.60
+n: 3	x_distance: 21.20	y_distance: 25.06
+n: 4	x_distance: 38.84	y_distance: 23.08
+n: 5	x_distance: 41.03	y_distance: 36.31
+n: 6	x_distance: 50.71	y_distance: 24.44
+n: 7	x_distance: 48.70	y_distance: 53.59
+n: 8	x_distance: 42.64	y_distance: 15.31
+n: 9	x_distance: 33.73	y_distance: 16.46
+Number: 1
+Number: 0
+Number: 0
+n: 0	x_distance: 77.15	y_distance: 69.29
+n: 1	x_distance: 36.06	y_distance: 33.73
+n: 2	x_distance: 16.77	y_distance: 52.78
+n: 3	x_distance: 23.04	y_distance: 41.25
+n: 4	x_distance: 2.01	y_distance: 2.69
+n: 5	x_distance: 29.25	y_distance: 46.76
+n: 6	x_distance: 35.68	y_distance: 26.68
+n: 7	x_distance: 20.92	y_distance: 60.81
+n: 8	x_distance: 30.42	y_distance: 24.09
+n: 9	x_distance: 31.42	y_distance: 29.83
+Number: 4
+Number: 0
+Number: 0
+Number: 0
+Number: 0
+n: 0	x_distance: 57.15	y_distance: 56.94
+n: 1	x_distance: 44.19	y_distance: 14.49
+n: 2	x_distance: 10.85	y_distance: 19.30
+n: 3	x_distance: 14.71	y_distance: 5.62
+n: 4	x_distance: 38.92	y_distance: 23.14
+n: 5	x_distance: 6.53	y_distance: 9.21
+n: 6	x_distance: 4.77	y_distance: 2.66
+n: 7	x_distance: 20.03	y_distance: 35.08
+n: 8	x_distance: 5.41	y_distance: 4.09
+n: 9	x_distance: 5.39	y_distance: 7.14
+Number: 6
+
+
+n: 0	x_distance: 81.41	y_distance: 66.30
+n: 1	x_distance: 41.43	y_distance: 30.93
+n: 2	x_distance: 22.67	y_distance: 49.97
+n: 3	x_distance: 28.92	y_distance: 37.26
+n: 4	x_distance: 9.20	y_distance: 2.79
+n: 5	x_distance: 35.20	y_distance: 43.67
+n: 6	x_distance: 38.78	y_distance: 23.53
+n: 7	x_distance: 26.23	y_distance: 60.51
+n: 8	x_distance: 34.88	y_distance: 20.64
+n: 9	x_distance: 34.87	y_distance: 26.77
+Number: 4
+Number: 0
+Number: 0
+Number: 0
+n: 0	x_distance: 54.19	y_distance: 61.64
+n: 1	x_distance: 31.68	y_distance: 2.78
+n: 2	x_distance: 6.06	y_distance: 2.15
+n: 3	x_distance: 10.89	y_distance: 6.66
+n: 4	x_distance: 30.42	y_distance: 31.79
+n: 5	x_distance: 5.03	y_distance: 16.38
+n: 6	x_distance: 5.91	y_distance: 17.23
+n: 7	x_distance: 11.38	y_distance: 35.76
+n: 8	x_distance: 5.36	y_distance: 10.10
+n: 9	x_distance: 5.19	y_distance: 13.25
+Number: 2
+Number: 0
+Number: 0
+n: 0	x_distance: 57.85	y_distance: 62.09
+n: 1	x_distance: 38.38	y_distance: 21.59
+n: 2	x_distance: 7.70	y_distance: 19.91
+n: 3	x_distance: 11.75	y_distance: 10.05
+n: 4	x_distance: 32.88	y_distance: 35.90
+n: 5	x_distance: 4.52	y_distance: 1.61
+n: 6	x_distance: 5.55	y_distance: 9.67
+n: 7	x_distance: 15.78	y_distance: 25.33
+n: 8	x_distance: 4.29	y_distance: 9.42
+n: 9	x_distance: 5.60	y_distance: 16.85
+Number: 5
+Number: 0
+
+
+[[0, 4, 0, 0, 9, 0, 0, 0, 2], [2, 0, 0, 0, 0, 3, 0, 0, 7], [8, 6, 0, 0, 0, 7, 0, 9, 0], [0, 0, 0, 0, 6, 5, 0, 1, 0], [5, 0, 0, 0, 0, 0, 0, 0, 9], [0, 9, 0, 7, 3, 0, 0, 0, 0], [0, 8, 0, 1, 0, 0, 0, 4, 3], [1, 0, 0, 4, 0, 0, 0, 0, 6], [4, 0, 0, 0, 2, 0, 0, 5, 0]]
+
+Process finished with exit code 0

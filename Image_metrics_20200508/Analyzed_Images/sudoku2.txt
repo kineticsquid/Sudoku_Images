@@ -1,0 +1,524 @@
+Algorithm:
+- Compute histogram os distriution of pixels (as a percentage of all pixels in the number image) along both the X and Y axes.
+- Least sqaures distance using the Y axis.
+- If the result is 2, use the lesser of the X Axis differences to decide between 1 and 2
+
+n: 0	x_distance: 66.20	y_distance: 53.95	product: 3571.78
+n: 1	x_distance: 49.01	y_distance: 11.05	product: 541.70
+n: 2	x_distance: 14.03	y_distance: 17.14	product: 240.38
+n: 3	x_distance: 15.75	y_distance: 7.35	product: 115.80
+n: 4	x_distance: 36.86	y_distance: 18.41	product: 678.44
+n: 5	x_distance: 9.19	y_distance: 10.43	product: 95.89
+n: 6	x_distance: 12.10	y_distance: 6.22	product: 75.24
+n: 7	x_distance: 22.26	y_distance: 32.37	product: 720.58
+n: 8	x_distance: 9.28	y_distance: 3.40	product: 31.50
+n: 9	x_distance: 12.34	y_distance: 6.77	product: 83.50
+Number: 8		Image Density: 0.08448997576558713
+both right
+
+n: 0	x_distance: 64.07	y_distance: 64.44	product: 4128.26
+n: 1	x_distance: 43.03	y_distance: 24.95	product: 1073.72
+n: 2	x_distance: 13.11	y_distance: 24.89	product: 326.38
+n: 3	x_distance: 16.29	y_distance: 14.56	product: 237.08
+n: 4	x_distance: 39.68	y_distance: 35.70	product: 1416.37
+n: 5	x_distance: 8.22	y_distance: 6.51	product: 53.52
+n: 6	x_distance: 11.33	y_distance: 14.20	product: 160.91
+n: 7	x_distance: 20.14	y_distance: 25.16	product: 506.67
+n: 8	x_distance: 9.08	y_distance: 13.43	product: 121.97
+n: 9	x_distance: 11.74	y_distance: 19.85	product: 233.08
+Number: 5		Image Density: 0.07494272935529617
+both right
+
+n: 0	x_distance: 64.82	y_distance: 86.38	product: 5599.32
+n: 1	x_distance: 15.94	y_distance: 47.39	product: 755.60
+n: 2	x_distance: 14.47	y_distance: 41.43	product: 599.43
+n: 3	x_distance: 28.32	y_distance: 32.76	product: 927.71
+n: 4	x_distance: 35.54	y_distance: 59.36	product: 2109.57
+n: 5	x_distance: 23.79	y_distance: 30.14	product: 717.01
+n: 6	x_distance: 28.25	y_distance: 46.65	product: 1317.67
+n: 7	x_distance: 8.51	y_distance: 6.04	product: 51.44
+n: 8	x_distance: 27.41	y_distance: 38.37	product: 1051.79
+n: 9	x_distance: 27.30	y_distance: 38.10	product: 1039.96
+Number: 7		Image Density: 0.0538435866058516
+both right
+
+n: 0	x_distance: 68.62	y_distance: 58.49	product: 4013.49
+n: 1	x_distance: 40.32	y_distance: 13.72	product: 553.18
+n: 2	x_distance: 12.60	y_distance: 14.62	product: 184.23
+n: 3	x_distance: 9.63	y_distance: 5.92	product: 57.02
+n: 4	x_distance: 27.17	y_distance: 28.77	product: 781.63
+n: 5	x_distance: 12.92	y_distance: 10.27	product: 132.65
+n: 6	x_distance: 19.55	y_distance: 11.11	product: 217.15
+n: 7	x_distance: 17.63	y_distance: 26.43	product: 465.92
+n: 8	x_distance: 14.52	y_distance: 8.40	product: 121.94
+n: 9	x_distance: 14.71	y_distance: 14.05	product: 206.72
+Number: 3		Image Density: 0.06543478260869565
+both right
+
+n: 0	x_distance: 59.75	y_distance: 54.08	product: 3231.17
+n: 1	x_distance: 44.14	y_distance: 13.03	product: 575.14
+n: 2	x_distance: 8.20	y_distance: 18.99	product: 155.79
+n: 3	x_distance: 10.69	y_distance: 7.74	product: 82.76
+n: 4	x_distance: 30.82	y_distance: 20.12	product: 620.03
+n: 5	x_distance: 4.10	y_distance: 9.73	product: 39.92
+n: 6	x_distance: 4.03	y_distance: 6.57	product: 26.50
+n: 7	x_distance: 19.53	y_distance: 30.27	product: 591.27
+n: 8	x_distance: 2.71	y_distance: 3.60	product: 9.73
+n: 9	x_distance: 3.97	y_distance: 6.80	product: 26.95
+Number: 8		Image Density: 0.07807274247491638
+both right
+
+n: 0	x_distance: 60.08	y_distance: 66.68	product: 4005.81
+n: 1	x_distance: 32.21	y_distance: 10.03	product: 322.86
+n: 2	x_distance: 6.50	y_distance: 5.63	product: 36.60
+n: 3	x_distance: 12.03	y_distance: 9.16	product: 110.12
+n: 4	x_distance: 29.21	y_distance: 39.43	product: 1152.04
+n: 5	x_distance: 7.84	y_distance: 17.08	product: 133.92
+n: 6	x_distance: 11.09	y_distance: 21.16	product: 234.67
+n: 7	x_distance: 13.84	y_distance: 34.99	product: 484.14
+n: 8	x_distance: 9.80	y_distance: 15.67	product: 153.56
+n: 9	x_distance: 9.04	y_distance: 20.87	product: 188.63
+Number: 2		Image Density: 0.06766837169650469
+both right
+
+
+n: 0	x_distance: 64.76	y_distance: 57.46	product: 3721.12
+n: 1	x_distance: 48.97	y_distance: 18.55	product: 908.51
+n: 2	x_distance: 15.05	y_distance: 29.17	product: 439.01
+n: 3	x_distance: 14.27	y_distance: 14.43	product: 205.93
+n: 4	x_distance: 43.90	y_distance: 23.74	product: 1042.42
+n: 5	x_distance: 9.04	y_distance: 19.63	product: 177.41
+n: 6	x_distance: 11.20	y_distance: 10.24	product: 114.68
+n: 7	x_distance: 23.88	y_distance: 39.46	product: 942.35
+n: 8	x_distance: 9.32	y_distance: 6.65	product: 61.92
+n: 9	x_distance: 10.13	y_distance: 6.41	product: 64.91
+Number: 9		Image Density: 0.08065934065934066
+y_distance right
+product wrong
+
+[[0, 0, 0, 8, 5, 0, 0, 0, 7], [3, 8, 2, 0, 0, 0, 0, 0, 0], [9*, 0, 7, 0, 8, 0, 1, 8, 4], [0, 2, 8, 0, 0, 8, 0, 3, 0], [4, 0, 9, 0, 0, 0, 8, 0, 8], [0, 3, 0, 9, 0, 0, 4, 7, 0], [7, 1, 3, 0, 8, 0, 2, 0, 8], [0, 0, 0, 0, 0, 0, 5, 1, 6], [2, 0, 0, 0, 9, 8, 0, 0, 0]]
+
+
+n: 0	x_distance: 64.84	y_distance: 85.74	product: 5559.53
+n: 1	x_distance: 15.54	y_distance: 46.49	product: 722.40
+n: 2	x_distance: 14.29	y_distance: 40.65	product: 581.09
+n: 3	x_distance: 28.08	y_distance: 32.10	product: 901.21
+n: 4	x_distance: 35.32	y_distance: 58.79	product: 2076.46
+n: 5	x_distance: 23.63	y_distance: 29.60	product: 699.26
+n: 6	x_distance: 28.18	y_distance: 45.80	product: 1290.43
+n: 7	x_distance: 8.47	y_distance: 6.10	product: 51.65
+n: 8	x_distance: 27.31	y_distance: 37.69	product: 1029.39
+n: 9	x_distance: 27.12	y_distance: 37.33	product: 1012.30
+Number: 7		Image Density: 0.05235940530058177
+both right
+
+n: 0	x_distance: 69.04	y_distance: 59.89	product: 4134.99
+n: 1	x_distance: 40.70	y_distance: 17.43	product: 709.57
+n: 2	x_distance: 12.89	y_distance: 23.50	product: 303.00
+n: 3	x_distance: 9.99	y_distance: 11.48	product: 114.59
+n: 4	x_distance: 26.67	y_distance: 28.79	product: 767.57
+n: 5	x_distance: 13.38	y_distance: 16.21	product: 216.86
+n: 6	x_distance: 20.08	y_distance: 13.33	product: 267.73
+n: 7	x_distance: 17.84	y_distance: 33.59	product: 599.15
+n: 8	x_distance: 14.98	y_distance: 10.77	product: 161.34
+n: 9	x_distance: 15.25	y_distance: 17.19	product: 262.19
+Number: 8		Image Density: 0.06444041395497706
+y_distance wrong
+product right
+
+[[0, 0, 0, 8, 5, 0, 0, 0, 7], [3, 8, 2, 0, 0, 0, 0, 0, 0], [9, 0, 7, 0, 8*, 0, 1, 8, 4], [0, 2, 8, 0, 0, 8, 0, 3, 0], [4, 0, 9, 0, 0, 0, 8, 0, 8], [0, 3, 0, 9, 0, 0, 4, 7, 0], [7, 1, 3, 0, 8, 0, 2, 0, 8], [0, 0, 0, 0, 0, 0, 5, 1, 6], [2, 0, 0, 0, 9, 8, 0, 0, 0]]
+
+
+n: 0	x_distance: 91.38	y_distance: 64.73	product: 5914.48
+n: 1	x_distance: 71.12	y_distance: 17.46	product: 1241.50
+n: 2	x_distance: 34.11	y_distance: 34.58	product: 1179.59
+n: 3	x_distance: 17.70	y_distance: 26.13	product: 462.48
+n: 4	x_distance: 39.26	y_distance: 27.51	product: 1080.13
+n: 5	x_distance: 35.86	y_distance: 37.58	product: 1347.63
+n: 6	x_distance: 45.16	y_distance: 28.74	product: 1297.91
+n: 7	x_distance: 44.51	y_distance: 45.65	product: 2031.76
+n: 8	x_distance: 37.56	y_distance: 19.20	product: 721.29
+n: 9	x_distance: 29.05	y_distance: 19.06	product: 553.67
+Number: 1		Image Density: 0.039000215470803706
+y_distance right
+product wrong
+
+[[0, 0, 0, 8, 5, 0, 0, 0, 7], [3, 8, 2, 0, 0, 0, 0, 0, 0], [9, 0, 7, 0, 8, 0, 1*, 8, 4], [0, 2, 8, 0, 0, 8, 0, 3, 0], [4, 0, 9, 0, 0, 0, 8, 0, 8], [0, 3, 0, 9, 0, 0, 4, 7, 0], [7, 1, 3, 0, 8, 0, 2, 0, 8], [0, 0, 0, 0, 0, 0, 5, 1, 6], [2, 0, 0, 0, 9, 8, 0, 0, 0]]
+
+n: 0	x_distance: 59.41	y_distance: 55.44	product: 3294.14
+n: 1	x_distance: 43.64	y_distance: 16.89	product: 737.21
+n: 2	x_distance: 8.04	y_distance: 27.17	product: 218.52
+n: 3	x_distance: 10.50	y_distance: 13.00	product: 136.54
+n: 4	x_distance: 31.50	y_distance: 19.31	product: 608.26
+n: 5	x_distance: 3.82	y_distance: 14.44	product: 55.17
+n: 6	x_distance: 3.74	y_distance: 7.86	product: 29.37
+n: 7	x_distance: 19.34	y_distance: 37.16	product: 718.79
+n: 8	x_distance: 2.51	y_distance: 5.75	product: 14.46
+n: 9	x_distance: 3.67	y_distance: 10.01	product: 36.70
+Number: 8		Image Density: 0.07893068469991547
+both right
+
+n: 0	x_distance: 94.87	y_distance: 71.16	product: 6750.45
+n: 1	x_distance: 52.15	y_distance: 36.66	product: 1912.14
+n: 2	x_distance: 36.05	y_distance: 56.20	product: 2026.22
+n: 3	x_distance: 45.01	y_distance: 43.21	product: 1945.05
+n: 4	x_distance: 22.25	y_distance: 6.12	product: 136.21
+n: 5	x_distance: 49.06	y_distance: 49.42	product: 2424.46
+n: 6	x_distance: 53.12	y_distance: 28.42	product: 1509.70
+n: 7	x_distance: 41.42	y_distance: 63.79	product: 2642.37
+n: 8	x_distance: 49.31	y_distance: 26.63	product: 1313.36
+n: 9	x_distance: 49.91	y_distance: 32.24	product: 1609.29
+Number: 4		Image Density: 0.06604286802306604
+both right
+
+n: 0	x_distance: 61.11	y_distance: 69.23	product: 4230.49
+n: 1	x_distance: 32.35	y_distance: 13.87	product: 448.53
+n: 2	x_distance: 9.80	y_distance: 8.94	product: 87.62
+n: 3	x_distance: 12.64	y_distance: 11.17	product: 141.25
+n: 4	x_distance: 33.53	y_distance: 43.22	product: 1449.06
+n: 5	x_distance: 8.79	y_distance: 19.05	product: 167.36
+n: 6	x_distance: 13.79	y_distance: 23.72	product: 327.16
+n: 7	x_distance: 13.15	y_distance: 36.87	product: 484.86
+n: 8	x_distance: 10.96	y_distance: 18.20	product: 199.54
+n: 9	x_distance: 11.96	y_distance: 23.73	product: 283.67
+Number: 2		Image Density: 0.06973795435333897
+both right
+
+n: 0	x_distance: 66.65	y_distance: 54.44	product: 3628.81
+n: 1	x_distance: 49.57	y_distance: 12.75	product: 631.90
+n: 2	x_distance: 14.07	y_distance: 18.30	product: 257.57
+n: 3	x_distance: 15.48	y_distance: 7.78	product: 120.40
+n: 4	x_distance: 38.12	y_distance: 20.38	product: 776.94
+n: 5	x_distance: 8.71	y_distance: 9.52	product: 82.98
+n: 6	x_distance: 12.05	y_distance: 6.70	product: 80.74
+n: 7	x_distance: 22.90	y_distance: 31.09	product: 712.09
+n: 8	x_distance: 9.02	y_distance: 3.84	product: 34.60
+n: 9	x_distance: 12.01	y_distance: 7.33	product: 88.07
+Number: 8		Image Density: 0.08123249299719888
+both right
+
+
+n: 0	x_distance: 64.08	y_distance: 56.54	product: 3623.00
+n: 1	x_distance: 49.33	y_distance: 15.92	product: 785.22
+n: 2	x_distance: 16.43	y_distance: 21.89	product: 359.73
+n: 3	x_distance: 18.44	y_distance: 9.88	product: 182.21
+n: 4	x_distance: 44.40	y_distance: 21.41	product: 950.34
+n: 5	x_distance: 10.74	y_distance: 8.69	product: 93.33
+n: 6	x_distance: 10.61	y_distance: 5.63	product: 59.72
+n: 7	x_distance: 24.87	y_distance: 33.61	product: 835.84
+n: 8	x_distance: 9.97	y_distance: 5.37	product: 53.57
+n: 9	x_distance: 11.79	y_distance: 9.73	product: 114.77
+Number: 8		Image Density: 0.08160156675008161
+both wrong - should be 6
+
+[[0, 0, 0, 8, 5, 0, 0, 0, 7], [3, 8, 2, 0, 0, 0, 0, 0, 0], [9, 0, 7, 0, 8, 0, 1, 8, 4], [0, 2, 8, 0, 0, 8*, 0, 3, 0], [4, 0, 9, 0, 0, 0, 8, 0, 8], [0, 3, 0, 9, 0, 0, 4, 7, 0], [7, 1, 3, 0, 8, 0, 2, 0, 8], [0, 0, 0, 0, 0, 0, 5, 1, 6], [2, 0, 0, 0, 9, 8, 0, 0, 0]]
+
+
+
+n: 0	x_distance: 68.59	y_distance: 58.68	product: 4025.04
+n: 1	x_distance: 38.91	y_distance: 12.35	product: 480.62
+n: 2	x_distance: 12.63	y_distance: 13.16	product: 166.22
+n: 3	x_distance: 10.32	y_distance: 5.75	product: 59.36
+n: 4	x_distance: 25.87	y_distance: 29.84	product: 771.91
+n: 5	x_distance: 13.92	y_distance: 10.24	product: 142.44
+n: 6	x_distance: 20.42	y_distance: 11.55	product: 235.82
+n: 7	x_distance: 16.80	y_distance: 26.80	product: 450.27
+n: 8	x_distance: 15.45	y_distance: 8.72	product: 134.80
+n: 9	x_distance: 15.84	y_distance: 14.39	product: 227.94
+Number: 3		Image Density: 0.06339814032121724
+both right
+
+
+n: 0	x_distance: 97.41	y_distance: 70.34	product: 6851.68
+n: 1	x_distance: 51.63	y_distance: 35.25	product: 1820.12
+n: 2	x_distance: 39.06	y_distance: 53.51	product: 2089.96
+n: 3	x_distance: 48.16	y_distance: 41.93	product: 2019.27
+n: 4	x_distance: 24.62	y_distance: 6.59	product: 162.23
+n: 5	x_distance: 52.56	y_distance: 47.06	product: 2473.05
+n: 6	x_distance: 56.84	y_distance: 27.48	product: 1562.21
+n: 7	x_distance: 43.01	y_distance: 65.64	product: 2822.95
+n: 8	x_distance: 53.18	y_distance: 24.94	product: 1326.53
+n: 9	x_distance: 53.63	y_distance: 30.30	product: 1625.21
+Number: 4		Image Density: 0.0678494623655914
+both right
+
+
+n: 0	x_distance: 64.92	y_distance: 56.30	product: 3654.93
+n: 1	x_distance: 48.35	y_distance: 12.48	product: 603.37
+n: 2	x_distance: 15.24	y_distance: 18.84	product: 287.00
+n: 3	x_distance: 14.61	y_distance: 9.46	product: 138.29
+n: 4	x_distance: 45.49	y_distance: 23.03	product: 1047.58
+n: 5	x_distance: 8.68	y_distance: 15.97	product: 138.55
+n: 6	x_distance: 11.48	y_distance: 9.07	product: 104.16
+n: 7	x_distance: 23.89	y_distance: 35.33	product: 844.05
+n: 8	x_distance: 9.35	y_distance: 4.81	product: 44.95
+n: 9	x_distance: 10.08	y_distance: 4.25	product: 42.82
+Number: 9		Image Density: 0.07674467636516973
+both right
+
+
+n: 0	x_distance: 66.92	y_distance: 54.01	product: 3614.39
+n: 1	x_distance: 49.63	y_distance: 10.56	product: 523.98
+n: 2	x_distance: 14.61	y_distance: 16.56	product: 241.94
+n: 3	x_distance: 16.32	y_distance: 7.13	product: 116.32
+n: 4	x_distance: 35.77	y_distance: 18.66	product: 667.40
+n: 5	x_distance: 10.19	y_distance: 10.78	product: 109.86
+n: 6	x_distance: 12.82	y_distance: 6.23	product: 79.89
+n: 7	x_distance: 22.69	y_distance: 33.00	product: 748.73
+n: 8	x_distance: 9.91	y_distance: 3.34	product: 33.09
+n: 9	x_distance: 13.23	y_distance: 6.49	product: 85.88
+Number: 8		Image Density: 0.07938013915243516
+both right
+
+
+n: 0	x_distance: 84.87	y_distance: 59.19	product: 5023.97
+n: 1	x_distance: 57.07	y_distance: 13.10	product: 747.78
+n: 2	x_distance: 27.71	y_distance: 29.12	product: 807.00
+n: 3	x_distance: 14.73	y_distance: 21.20	product: 312.25
+n: 4	x_distance: 29.69	y_distance: 21.07	product: 625.44
+n: 5	x_distance: 31.69	y_distance: 30.46	product: 965.30
+n: 6	x_distance: 40.93	y_distance: 22.19	product: 908.23
+n: 7	x_distance: 36.37	y_distance: 45.53	product: 1655.93
+n: 8	x_distance: 34.09	y_distance: 12.81	product: 436.68
+n: 9	x_distance: 26.11	y_distance: 14.06	product: 367.19
+Number: 8		Image Density: 0.04322367720643032
+both wrong - should be 1
+
+[[0, 0, 0, 8, 5, 0, 0, 0, 7], [3, 8, 2, 0, 0, 0, 0, 0, 0], [9, 0, 7, 0, 8, 0, 1, 8, 4], [0, 2, 8, 0, 0, 8, 0, 3, 0], [4, 0, 9, 0, 0, 0, 8, 0, 8*], [0, 3, 0, 9, 0, 0, 4, 7, 0], [7, 1, 3, 0, 8, 0, 2, 0, 8], [0, 0, 0, 0, 0, 0, 5, 1, 6], [2, 0, 0, 0, 9, 8, 0, 0, 0]]
+
+
+n: 0	x_distance: 68.46	y_distance: 58.31	product: 3991.41
+n: 1	x_distance: 39.50	y_distance: 11.08	product: 437.60
+n: 2	x_distance: 12.70	y_distance: 12.06	product: 153.18
+n: 3	x_distance: 10.51	y_distance: 5.13	product: 53.93
+n: 4	x_distance: 25.87	y_distance: 29.14	product: 753.81
+n: 5	x_distance: 13.87	y_distance: 10.53	product: 146.13
+n: 6	x_distance: 19.99	y_distance: 11.11	product: 222.09
+n: 7	x_distance: 17.18	y_distance: 27.89	product: 478.98
+n: 8	x_distance: 15.14	y_distance: 8.10	product: 122.64
+n: 9	x_distance: 15.62	y_distance: 13.42	product: 209.54
+Number: 3		Image Density: 0.0641025641025641
+both right
+
+
+n: 0	x_distance: 65.12	y_distance: 56.07	product: 3650.96
+n: 1	x_distance: 50.22	y_distance: 13.80	product: 693.00
+n: 2	x_distance: 15.19	y_distance: 20.45	product: 310.76
+n: 3	x_distance: 14.28	y_distance: 9.38	product: 133.96
+n: 4	x_distance: 43.83	y_distance: 23.71	product: 1039.01
+n: 5	x_distance: 8.79	y_distance: 14.98	product: 131.68
+n: 6	x_distance: 11.19	y_distance: 8.74	product: 97.82
+n: 7	x_distance: 24.59	y_distance: 34.16	product: 840.14
+n: 8	x_distance: 9.11	y_distance: 4.48	product: 40.79
+n: 9	x_distance: 9.95	y_distance: 3.70	product: 36.81
+Number: 9		Image Density: 0.07973856209150326
+both right
+
+
+n: 0	x_distance: 95.38	y_distance: 69.83	product: 6660.37
+n: 1	x_distance: 49.94	y_distance: 34.52	product: 1723.77
+n: 2	x_distance: 37.66	y_distance: 53.78	product: 2025.37
+n: 3	x_distance: 46.74	y_distance: 41.27	product: 1929.01
+n: 4	x_distance: 24.22	y_distance: 5.96	product: 144.33
+n: 5	x_distance: 50.94	y_distance: 47.41	product: 2415.51
+n: 6	x_distance: 54.96	y_distance: 26.38	product: 1449.86
+n: 7	x_distance: 41.41	y_distance: 64.94	product: 2689.33
+n: 8	x_distance: 51.54	y_distance: 24.86	product: 1281.56
+n: 9	x_distance: 51.80	y_distance: 30.80	product: 1595.30
+Number: 4		Image Density: 0.06873638344226579
+both right
+
+n: 0	x_distance: 72.93	y_distance: 80.35	product: 5860.54
+n: 1	x_distance: 22.99	y_distance: 40.75	product: 936.58
+n: 2	x_distance: 22.73	y_distance: 35.97	product: 817.66
+n: 3	x_distance: 35.71	y_distance: 27.22	product: 971.85
+n: 4	x_distance: 43.49	y_distance: 53.56	product: 2329.45
+n: 5	x_distance: 30.79	y_distance: 25.75	product: 792.86
+n: 6	x_distance: 37.93	y_distance: 40.64	product: 1541.47
+n: 7	x_distance: 14.07	y_distance: 3.83	product: 53.90
+n: 8	x_distance: 35.70	y_distance: 32.76	product: 1169.67
+n: 9	x_distance: 37.61	y_distance: 33.44	product: 1257.91
+Number: 7		Image Density: 0.049145299145299144
+both right
+
+
+n: 0	x_distance: 72.55	y_distance: 86.96	product: 6308.95
+n: 1	x_distance: 22.44	y_distance: 47.38	product: 1063.10
+n: 2	x_distance: 22.28	y_distance: 40.94	product: 911.94
+n: 3	x_distance: 34.65	y_distance: 32.93	product: 1141.26
+n: 4	x_distance: 43.20	y_distance: 60.07	product: 2595.34
+n: 5	x_distance: 30.18	y_distance: 30.29	product: 914.30
+n: 6	x_distance: 37.52	y_distance: 47.34	product: 1776.22
+n: 7	x_distance: 13.78	y_distance: 5.97	product: 82.18
+n: 8	x_distance: 35.11	y_distance: 38.90	product: 1365.98
+n: 9	x_distance: 36.92	y_distance: 38.64	product: 1426.74
+Number: 7		Image Density: 0.05351648351648352
+both right
+
+n: 0	x_distance: 86.06	y_distance: 62.13	product: 5347.34
+n: 1	x_distance: 58.84	y_distance: 16.19	product: 952.55
+n: 2	x_distance: 29.08	y_distance: 33.23	product: 966.33
+n: 3	x_distance: 15.83	y_distance: 23.93	product: 378.81
+n: 4	x_distance: 31.12	y_distance: 24.08	product: 749.41
+n: 5	x_distance: 32.88	y_distance: 34.57	product: 1136.42
+n: 6	x_distance: 42.21	y_distance: 24.87	product: 1049.83
+n: 7	x_distance: 37.80	y_distance: 44.93	product: 1698.22
+n: 8	x_distance: 35.33	y_distance: 16.26	product: 574.32
+n: 9	x_distance: 27.10	y_distance: 16.56	product: 448.78
+Number: 1		Image Density: 0.04205409974640744
+y_distance right
+product wrong
+
+[[0, 0, 0, 8, 5, 0, 0, 0, 7], [3, 8, 2, 0, 0, 0, 0, 0, 0], [9, 0, 7, 0, 8, 0, 1, 8, 4], [0, 2, 8, 0, 0, 8, 0, 3, 0], [4, 0, 9, 0, 0, 0, 8, 0, 8], [0, 3, 0, 9, 0, 0, 4, 7, 0], [7, 1*, 3, 0, 8, 0, 2, 0, 8], [0, 0, 0, 0, 0, 0, 5, 1, 6], [2, 0, 0, 0, 9, 8, 0, 0, 0]]
+
+n: 0	x_distance: 60.73	y_distance: 58.97	product: 3581.40
+n: 1	x_distance: 33.59	y_distance: 14.38	product: 482.95
+n: 2	x_distance: 5.71	y_distance: 15.33	product: 87.61
+n: 3	x_distance: 3.55	y_distance: 6.50	product: 23.03
+n: 4	x_distance: 20.19	y_distance: 30.79	product: 621.53
+n: 5	x_distance: 7.01	y_distance: 9.69	product: 67.96
+n: 6	x_distance: 10.56	y_distance: 11.84	product: 125.08
+n: 7	x_distance: 13.40	y_distance: 24.90	product: 333.81
+n: 8	x_distance: 6.99	y_distance: 9.14	product: 63.93
+n: 9	x_distance: 5.26	y_distance: 14.65	product: 77.05
+Number: 3		Image Density: 0.0649644473173885
+both right
+
+
+n: 0	x_distance: 63.09	y_distance: 57.06	product: 3599.70
+n: 1	x_distance: 49.34	y_distance: 18.25	product: 900.56
+n: 2	x_distance: 13.01	y_distance: 24.77	product: 322.37
+n: 3	x_distance: 17.41	y_distance: 11.72	product: 203.93
+n: 4	x_distance: 38.07	y_distance: 21.21	product: 807.62
+n: 5	x_distance: 9.80	y_distance: 9.26	product: 90.78
+n: 6	x_distance: 8.05	y_distance: 6.47	product: 52.11
+n: 7	x_distance: 24.68	y_distance: 33.56	product: 828.34
+n: 8	x_distance: 8.50	y_distance: 5.93	product: 50.42
+n: 9	x_distance: 9.37	y_distance: 10.31	product: 96.60
+Number: 8		Image Density: 0.08108396457911021
+both wrong - should be 6
+
+[[0, 0, 0, 8, 5, 0, 0, 0, 7], [3, 8, 2, 0, 0, 0, 0, 0, 0], [9, 0, 7, 0, 8, 0, 1, 8, 4], [0, 2, 8, 0, 0, 8, 0, 3, 0], [4, 0, 9, 0, 0, 0, 8, 0, 8], [0, 3, 0, 9, 0, 0, 4, 7, 0], [7, 1, 3, 0, 8*, 0, 2, 0, 8], [0, 0, 0, 0, 0, 0, 5, 1, 6], [2, 0, 0, 0, 9, 8, 0, 0, 0]]
+
+
+n: 0	x_distance: 61.42	y_distance: 69.45	product: 4265.77
+n: 1	x_distance: 33.33	y_distance: 14.64	product: 488.14
+n: 2	x_distance: 10.23	y_distance: 9.26	product: 94.71
+n: 3	x_distance: 12.92	y_distance: 11.20	product: 144.78
+n: 4	x_distance: 34.64	y_distance: 43.81	product: 1517.68
+n: 5	x_distance: 8.74	y_distance: 18.45	product: 161.32
+n: 6	x_distance: 13.84	y_distance: 23.65	product: 327.26
+n: 7	x_distance: 13.77	y_distance: 36.10	product: 497.18
+n: 8	x_distance: 10.95	y_distance: 18.30	product: 200.36
+n: 9	x_distance: 11.98	y_distance: 23.91	product: 286.39
+Number: 2		Image Density: 0.07024348200818789
+both right
+
+
+n: 0	x_distance: 67.01	y_distance: 54.80	product: 3671.93
+n: 1	x_distance: 50.40	y_distance: 15.03	product: 757.34
+n: 2	x_distance: 14.44	y_distance: 21.13	product: 305.14
+n: 3	x_distance: 15.71	y_distance: 9.15	product: 143.77
+n: 4	x_distance: 38.57	y_distance: 20.64	product: 796.26
+n: 5	x_distance: 8.94	y_distance: 9.82	product: 87.77
+n: 6	x_distance: 12.36	y_distance: 7.20	product: 89.01
+n: 7	x_distance: 23.06	y_distance: 30.78	product: 709.71
+n: 8	x_distance: 9.24	y_distance: 4.48	product: 41.40
+n: 9	x_distance: 12.29	y_distance: 8.16	product: 100.31
+Number: 8		Image Density: 0.08181917092808182
+both right
+
+
+n: 0	x_distance: 65.19	y_distance: 63.50	product: 4139.92
+n: 1	x_distance: 44.98	y_distance: 25.21	product: 1134.20
+n: 2	x_distance: 14.16	y_distance: 25.80	product: 365.31
+n: 3	x_distance: 17.42	y_distance: 14.87	product: 258.98
+n: 4	x_distance: 41.81	y_distance: 34.20	product: 1430.08
+n: 5	x_distance: 8.54	y_distance: 5.98	product: 51.11
+n: 6	x_distance: 11.70	y_distance: 13.27	product: 155.27
+n: 7	x_distance: 21.65	y_distance: 26.02	product: 563.33
+n: 8	x_distance: 9.46	y_distance: 12.74	product: 120.53
+n: 9	x_distance: 12.38	y_distance: 19.91	product: 246.47
+Number: 5		Image Density: 0.07097186700767263
+both right
+
+n: 0	x_distance: 86.15	y_distance: 61.93	product: 5334.78
+n: 1	x_distance: 58.23	y_distance: 15.59	product: 907.70
+n: 2	x_distance: 28.98	y_distance: 32.51	product: 942.02
+n: 3	x_distance: 15.78	y_distance: 24.09	product: 380.10
+n: 4	x_distance: 31.10	y_distance: 23.72	product: 737.58
+n: 5	x_distance: 32.89	y_distance: 34.55	product: 1136.42
+n: 6	x_distance: 42.39	y_distance: 24.66	product: 1045.30
+n: 7	x_distance: 37.68	y_distance: 47.25	product: 1780.39
+n: 8	x_distance: 35.47	y_distance: 15.95	product: 565.72
+n: 9	x_distance: 27.26	y_distance: 16.49	product: 449.63
+Number: 1		Image Density: 0.04149247491638796
+y_distance right
+product wrong
+
+[[0, 0, 0, 8, 5, 0, 0, 0, 7], [3, 8, 2, 0, 0, 0, 0, 0, 0], [9, 0, 7, 0, 8, 0, 1, 8, 4], [0, 2, 8, 0, 0, 8, 0, 3, 0], [4, 0, 9, 0, 0, 0, 8, 0, 8], [0, 3, 0, 9, 0, 0, 4, 7, 0], [7, 1, 3, 0, 8, 0, 2, 0, 8], [0, 0, 0, 0, 0, 0, 5, 1*, 6], [2, 0, 0, 0, 9, 8, 0, 0, 0]]
+
+n: 0	x_distance: 63.56	y_distance: 56.64	product: 3600.24
+n: 1	x_distance: 48.31	y_distance: 15.51	product: 749.48
+n: 2	x_distance: 15.84	y_distance: 21.50	product: 340.69
+n: 3	x_distance: 18.07	y_distance: 9.45	product: 170.77
+n: 4	x_distance: 44.29	y_distance: 21.87	product: 968.62
+n: 5	x_distance: 10.06	y_distance: 8.54	product: 85.96
+n: 6	x_distance: 10.20	y_distance: 5.10	product: 51.98
+n: 7	x_distance: 24.28	y_distance: 33.76	product: 819.47
+n: 8	x_distance: 9.45	y_distance: 5.28	product: 49.89
+n: 9	x_distance: 11.26	y_distance: 9.20	product: 103.59
+Number: 6		Image Density: 0.08060697374085235
+y_distance right
+product wrong
+
+[[0, 0, 0, 8, 5, 0, 0, 0, 7], [3, 8, 2, 0, 0, 0, 0, 0, 0], [9, 0, 7, 0, 8, 0, 1, 8, 4], [0, 2, 8, 0, 0, 8, 0, 3, 0], [4, 0, 9, 0, 0, 0, 8, 0, 8], [0, 3, 0, 9, 0, 0, 4, 7, 0], [7, 1, 3, 0, 8, 0, 2, 0, 8], [0, 0, 0, 0, 0, 0, 5, 1, 6*], [2, 0, 0, 0, 9, 8, 0, 0, 0]]
+
+
+
+
+n: 0	x_distance: 60.95	y_distance: 69.60	product: 4242.28
+n: 1	x_distance: 33.46	y_distance: 9.12	product: 305.19
+n: 2	x_distance: 10.08	y_distance: 4.29	product: 43.28
+n: 3	x_distance: 13.10	y_distance: 11.07	product: 145.10
+n: 4	x_distance: 34.80	y_distance: 41.55	product: 1445.97
+n: 5	x_distance: 8.39	y_distance: 20.78	product: 174.45
+n: 6	x_distance: 13.17	y_distance: 24.26	product: 319.51
+n: 7	x_distance: 13.90	y_distance: 41.81	product: 581.13
+n: 8	x_distance: 10.55	y_distance: 18.14	product: 191.40
+n: 9	x_distance: 11.51	y_distance: 23.27	product: 267.89
+Number: 2		Image Density: 0.07112359550561798
+both right
+
+
+n: 0	x_distance: 64.57	y_distance: 56.32	product: 3636.74
+n: 1	x_distance: 48.92	y_distance: 15.93	product: 779.51
+n: 2	x_distance: 14.82	y_distance: 22.67	product: 336.01
+n: 3	x_distance: 14.05	y_distance: 9.73	product: 136.76
+n: 4	x_distance: 42.31	y_distance: 24.32	product: 1028.72
+n: 5	x_distance: 9.12	y_distance: 14.82	product: 135.18
+n: 6	x_distance: 11.13	y_distance: 8.74	product: 97.31
+n: 7	x_distance: 23.60	y_distance: 33.66	product: 794.39
+n: 8	x_distance: 9.19	y_distance: 4.69	product: 43.13
+n: 9	x_distance: 10.13	y_distance: 4.16	product: 42.16
+Number: 9		Image Density: 0.08072433729682557
+both right
+
+n: 0	x_distance: 67.08	y_distance: 53.93	product: 3617.43
+n: 1	x_distance: 51.14	y_distance: 13.50	product: 690.50
+n: 2	x_distance: 14.64	y_distance: 20.22	product: 295.96
+n: 3	x_distance: 15.76	y_distance: 8.33	product: 131.33
+n: 4	x_distance: 37.69	y_distance: 18.41	product: 693.78
+n: 5	x_distance: 9.44	y_distance: 10.56	product: 99.65
+n: 6	x_distance: 12.43	y_distance: 6.40	product: 79.50
+n: 7	x_distance: 23.47	y_distance: 31.64	product: 742.56
+n: 8	x_distance: 9.44	y_distance: 3.64	product: 34.41
+n: 9	x_distance: 12.46	y_distance: 7.22	product: 89.92
+Number: 8		Image Density: 0.08499276893981533
+both right
+
+
+
+[[0, 0, 0, 8, 5, 0, 0, 0, 7], [3, 8, 2, 0, 0, 0, 0, 0, 0], [9, 0, 7, 0, 8, 0, 1, 8, 4], [0, 2, 8, 0, 0, 8, 0, 3, 0], [4, 0, 9, 0, 0, 0, 8, 0, 8], [0, 3, 0, 9, 0, 0, 4, 7, 0], [7, 1, 3, 0, 8, 0, 2, 0, 8], [0, 0, 0, 0, 0, 0, 5, 1, 6], [2, 0, 0, 0, 9, 8, 0, 0, 0]]
+
+Process finished with exit code 0
